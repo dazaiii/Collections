@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,12 +23,19 @@ public class Main {
         class1.search("Nowak");
         class1.removeStudent(student1);
         class1.summary();
-        class1.searchPartial("star");
         HashMap<String, Class> classes = new HashMap<String, Class>();
         School school1 = new School("Sp1", classes);
         school1.addClass(class1.className, class1);
         school1.addClass(class2.className, class2);
         school1.findEmptyClass();
         school1.schoolSummay();
+        class1.searchPartial("star");
+        student1.addGrade(teacher1, 5);
+        student1.addGrade(teacher1, 5);
+        student1.addGrade(teacher1, 2);
+        student1.addGrade(teacher1, 1);
+        student1.getGrades(teacher1);
+        student1.deleteGrade(teacher1, 5);
+        student1.getGrades(teacher1);
     }
 }
